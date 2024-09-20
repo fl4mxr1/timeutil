@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../src/style.css">
+    <title>TimeUtil // Home</title>
+</head>
+<body>
+    <div class="site-wrapper">
+        <h1>TimeUtil <span class="text-secondary h3">/ Timer</span></h1>
+        <input type="checkbox" id="test-ttc"> Toggle Timer Container
+        <div class="timer-countdown-container">
+            <h1 class="timer-countdown">BO:OB:IE<span class="text-secondary h2">.S0</span></h1>
+        </div>
+        <section class="utilities-list">
+            <h3>Tools</h3>
+            <div class="list-container">
+                <a href="../timer" class="li utilities-list-li">Timer</a>
+                <a href="#" class="li">Alarm</a>
+                <a href="#" class="li">Countdown</a>
+                <a href="#" class="li">Clock</a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Little test stuff
+        const timerCountdownContainer = document.querySelector(".timer-countdown-container")
+        const testTTC = document.querySelector("#test-ttc")
+        testTTC.addEventListener("input", () => {
+            let v = testTTC.checked
+            console.log(v)
+            if (v) {
+                timerCountdownContainer.className = "timer-countdown-container visible"
+            } else {
+                timerCountdownContainer.className = "timer-countdown-container"  
+            }
+        })
+    </script>
+</body>
+</html>
