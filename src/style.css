@@ -64,9 +64,45 @@ section.utilities-list .list-container a.li::after {
 
 /* TIMER SHIT DOWN HERE !!!! */
 
+.letterChangeFx {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    /* background: red; */
+    height: max-content;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.letterChangeFx .inner {
+    position: relative;
+    height: min-content;
+    display: inline-block;
+    translate: 0 0;
+}
+
+.letterChangeFx .inner .old, .letterChangeFx .inner .cur, 
+.letterChangeFx .inner .old, .letterChangeFx .inner .old {
+    padding: 0;
+    margin: 0;
+    height: min-content;
+}
+
+.letterChangeFx .inner .old, .letterChangeFx .inner .cur {
+    font-size: 4rem;
+}
+
+.letterChangeFx .inner .old, .letterChangeFx .inner .old {
+    font-size: 4rem;
+    position: absolute;
+    bottom: 100%;
+}
+
 .timer-countdown-container {
     opacity: 0;
-    transition: opacity 0.3s, scale 0.5s cubic-bezier(.17,.67,.35,1.27);
+    transition: opacity 0.3s, scale 0.2s cubic-bezier(.17,.67,.35,1.27);
     scale: 1 0;
 }
 
@@ -79,4 +115,18 @@ section.utilities-list .list-container a.li::after {
     font-size: 4rem;
     font-family: "DM Mono", monospace;
     font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 0;
+}
+
+.timer-countdown-container .timer-countdown .group {
+    margin: 0;
+    padding: 0;
+    height: min-content;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 0;
 }

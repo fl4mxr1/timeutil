@@ -10,8 +10,53 @@
     <div class="site-wrapper">
         <h1>TimeUtil <span class="text-secondary h3">/ Timer</span></h1>
         <input type="checkbox" id="test-ttc"> Toggle Timer Container
-        <div class="timer-countdown-container">
-            <h1 class="timer-countdown">BO:OB:IE<span class="text-secondary h2">.S0</span></h1>
+        <div class="timer-countdown-container visible">
+            <h1 class="timer-countdown">
+                <span class="group h">
+                    <span class="letter letterChangeFx" data-num="0">
+                        <span class="inner">
+                            <span class="old">0</span>
+                            <span class="cur">0</span>
+                        </span>
+                    </span>
+                    <span class="letter letterChangeFx" data-num="0">
+                        <span class="inner">
+                            <span class="old">0</span>
+                            <span class="cur">0</span>
+                        </span>
+                    </span>
+                </span>
+                :
+                <span class="group m">
+                    <span class="letter letterChangeFx" data-num="0">
+                        <span class="inner">
+                            <span class="old">0</span>
+                            <span class="cur">0</span>
+                        </span>
+                    </span>
+                    <span class="letter letterChangeFx" data-num="0">
+                        <span class="inner">
+                            <span class="old">0</span>
+                            <span class="cur">0</span>
+                        </span>
+                    </span>
+                </span>
+                :
+                <span class="group s">
+                    <span class="letter letterChangeFx" data-num="0">
+                        <span class="inner">
+                            <span class="old">0</span>
+                            <span class="cur">0</span>
+                        </span>
+                    </span>
+                    <span class="letter letterChangeFx" data-num="0">
+                        <span class="inner">
+                            <span class="old">0</span>
+                            <span class="cur">0</span>
+                        </span>
+                    </span>
+                </span>
+            <span class="text-secondary h2 ms">.50</span></h1>
         </div>
         <section class="utilities-list">
             <h3>Tools</h3>
@@ -38,5 +83,7 @@
             }
         })
     </script>
+    <script src="../../src/timer.js"></script>
+    <script src="../../src/letterchange.js"></script>
 </body>
 </html>
