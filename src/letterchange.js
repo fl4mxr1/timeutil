@@ -5,11 +5,11 @@ Array.from(letterChangeEffects).forEach((v, i) => {
     let old = inner.querySelector(".old")
     let cur = inner.querySelector(".cur")
     function OnLetterChange(oldLetter, newLetter) {
-        console.log(oldLetter, newLetter)
+        //console.log(oldLetter, newLetter)
         old.innerText = oldLetter || 0
         cur.innerText = newLetter || 0
         inner.animate([{translate: "0 100%"}, {translate: "0 0"}], {duration: 300, iterations: 1, easing: "cubic-bezier(.17,.67,.38,1.01)", fill: "forwards"})
-        old.animate([{opacity: 0, filter: "blur(10px)"}, {opacity: 1}], {fill: "forwards", duration: 300, iterations: 1})
+        old.animate([{opacity: 0, filter: "blur(0)"}, {opacity: 1, filter: "blur(7px)"}], {fill: "forwards", duration: 300, iterations: 1})
     }
     let ol, nl = v.dataset.num
     function CheckIfLetterChange() {
