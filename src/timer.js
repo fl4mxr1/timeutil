@@ -33,23 +33,23 @@ function startTimer(timerLen) {
         let secs = remainingMins * 60
         let floorSecs = r(secs)
         let remainingSecs = secs - floorSecs
-        let ms = remainingSecs * 1000
+        let ms = remainingSecs * 100
 
         let paddedHrs = r(hours).toString().padStart(2, "0")
         let paddedMins = r(mins).toString().padStart(2, "0")
         let paddedSecs = r(secs).toString().padStart(2, "0")
-        let paddedMs = r(secs).toString().padStart(3, "0")
+        let paddedMs = r(ms).toString().padStart(2, "0")
 
-        for (i=0; 2; i++) {
-            console.log(hoursLabelLetters, hoursLabelLetters[i])
+        for (i=0; i < 2; i++) {
             hoursLabelLetters[i].dataset.num = paddedHrs.charAt(i)
             minsLabelLetters[i].dataset.num = paddedMins.charAt(i)
             secsLabelLetters[i].dataset.num = paddedSecs.charAt(i)
         }
-        msLabel.innerHTML = `".${paddedMs}"`
+        msLabel.innerHTML = `.${paddedMs}`
 
         // END UP UPDATE LABEL !!!
         if (currentTime <= 0) {
+            currentTime = 0
             clearInterval(timerItv)
             // TIMER ENDED !!
             console.log("Timer ended")
@@ -61,4 +61,4 @@ function startTimer(timerLen) {
     }, 5);
 }
 
-startTimer(3601234)
+startTimer(10000)

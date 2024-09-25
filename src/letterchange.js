@@ -8,8 +8,8 @@ Array.from(letterChangeEffects).forEach((v, i) => {
         //console.log(oldLetter, newLetter)
         old.innerText = oldLetter || 0
         cur.innerText = newLetter || 0
-        inner.animate([{translate: "0 100%"}, {translate: "0 0"}], {duration: 300, iterations: 1, easing: "cubic-bezier(.17,.67,.38,1.01)", fill: "forwards"})
-        old.animate([{opacity: 0, filter: "blur(0)"}, {opacity: 1, filter: "blur(7px)"}], {fill: "forwards", duration: 300, iterations: 1})
+        inner.animate([{translate: "0 100%"}, {translate: "0 0"}], {duration: 500, iterations: 1, easing: "cubic-bezier(.34,.2,.23,1.01)", fill: "forwards"})
+        old.animate([{opacity: "0", scale: "1"}, {opacity: "1", scale: "0.3"}], {fill: "forwards", duration: 500, iterations: 1, easing: "ease"})
     }
     let ol, nl = v.dataset.num
     function CheckIfLetterChange() {
