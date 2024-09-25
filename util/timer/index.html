@@ -9,8 +9,28 @@
 </head>
 <body>
     <div class="site-wrapper">
-        <h1>TimeUtil <span class="text-secondary h3">/ Timer</span></h1>
-        <input type="checkbox" id="test-ttc"> Toggle Timer Container
+        <nav class="navbar">
+            <button onclick="window.location='../../index.html'">
+                <img width="20" height="20" src="https://img.icons8.com/sf-black-filled/64/e6e6e6/home-page.png" alt="home"/>
+            </button>
+            <h3 class="title">TimeUtil <span class="text-secondary">Timer</span></h3>
+            <button>
+                <img width="20" height="20" src="https://img.icons8.com/sf-black-filled/64/e6e6e6/stopwatch.png" alt="home"/>
+                Timer
+            </button>
+            <button>
+                <img width="20" height="20" src="https://img.icons8.com/sf-black-filled/64/e6e6e6/alarm-clock.png" alt="home"/>
+                Alarm
+            </button>
+            <button>
+                <img width="20" height="20" src="https://img.icons8.com/sf-black-filled/64/e6e6e6/hourglass-sand-top.png" alt="home"/>
+                Countdown
+            </button>
+            <button>
+                <img width="20" height="20" src="https://img.icons8.com/sf-black-filled/64/e6e6e6/clock.png" alt="home"/>
+                Clock
+            </button>
+        </nav>
         <div class="timer-countdown-container visible">
             <div class="timer-countdown">
                 <div class="countdown">
@@ -58,13 +78,13 @@
                             </span>
                         </span>
                     </span>
-                    <h2 class="text-secondary ms">.50</span>
+                    <h2 class="text-secondary cs">.00</span>
                 </div>
                 <div class="controls">
-                    <button>
+                    <button class="controls-button">
                         <i class="fa-solid fa-pause"></i>
                     </button>
-                    <button>
+                    <button class="controls-button">
                         <i class="fa-solid fa-stop"></i>
                     </button>
                 </div>
@@ -80,21 +100,6 @@
             </div>
         </section>
     </div>
-
-    <script>
-        // Little test stuff
-        const timerCountdownContainer = document.querySelector(".timer-countdown-container")
-        const testTTC = document.querySelector("#test-ttc")
-        testTTC.addEventListener("input", () => {
-            let v = testTTC.checked
-            console.log(v)
-            if (v) {
-                timerCountdownContainer.className = "timer-countdown-container visible"
-            } else {
-                timerCountdownContainer.className = "timer-countdown-container"  
-            }
-        })
-    </script>
     <script src="../../src/timer.js"></script>
     <script src="../../src/letterchange.js"></script>
 </body>

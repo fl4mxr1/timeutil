@@ -23,7 +23,7 @@ function startTimer(timerLen) {
         const minsLabelLetters = minsLabel.querySelectorAll(".letter")
         const secsLabel = timer.querySelector(".s")
         const secsLabelLetters = secsLabel.querySelectorAll(".letter")
-        const msLabel = timer.querySelector(".ms")
+        const csLabel = timer.querySelector(".cs")
         let hours = currentTime / 3600000
         let floorHrs = r(hours)
         let remainingHrs = hours - floorHrs
@@ -33,19 +33,19 @@ function startTimer(timerLen) {
         let secs = remainingMins * 60
         let floorSecs = r(secs)
         let remainingSecs = secs - floorSecs
-        let ms = remainingSecs * 100
+        let cs = remainingSecs * 100
 
         let paddedHrs = r(hours).toString().padStart(2, "0")
         let paddedMins = r(mins).toString().padStart(2, "0")
         let paddedSecs = r(secs).toString().padStart(2, "0")
-        let paddedMs = r(ms).toString().padStart(2, "0")
+        let paddedCs = r(ms).toString().padStart(2, "0")
 
         for (i=0; i < 2; i++) {
             hoursLabelLetters[i].dataset.num = paddedHrs.charAt(i)
             minsLabelLetters[i].dataset.num = paddedMins.charAt(i)
             secsLabelLetters[i].dataset.num = paddedSecs.charAt(i)
         }
-        msLabel.innerHTML = `.${paddedMs}`
+        csLabel.innerHTML = `.${paddedMs}`
 
         // END UP UPDATE LABEL !!!
         if (currentTime <= 0) {
@@ -60,5 +60,3 @@ function startTimer(timerLen) {
         }
     }, 5);
 }
-
-startTimer(10000)
